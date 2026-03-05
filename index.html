@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Growthículo | Josy Domingues - Performance e Inovação</title>
+    <title>Growthículo | Josy Domingues - Transformação e Inovação</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <style>
@@ -14,7 +14,7 @@
             color: #333; 
         }
 
-        /* Paleta de Cores: Azul/Lilás (#4338ca) e Verde Limão (#84cc16) */
+        /* Paleta de Cores */
         .color-primary { color: #4338ca; } 
         .color-accent { color: #84cc16; } 
         .bg-primary { background-color: #4338ca; }
@@ -25,7 +25,7 @@
             background-color: #ffffff;
             border: 1px solid #e2e8f0; 
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            border-radius: 0.75rem; /* rounded-xl */
+            border-radius: 0.75rem; 
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
         
@@ -39,6 +39,8 @@
             margin-bottom: 1.5rem;
             padding-bottom: 0.5rem;
             border-bottom: 2px solid;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .timeline-item {
@@ -60,130 +62,132 @@
             border: 3px solid #ffffff;
         }
         
-        /* Ajuste para scrolls suaves ao clicar no menu */
         html {
             scroll-behavior: smooth;
         }
 
-        /* Estilo específico para os cards de entrega */
-        .delivery-card {
-            border-left: 4px solid #84cc16;
-        }
+        .delivery-card { border-left: 4px solid #84cc16; }
+        .step-card { border-top: 4px solid #4338ca; }
+        .stat-text { font-size: 2.5rem; line-height: 1; font-weight: 900; }
     </style>
 </head>
 <body class="p-4 md:p-8">
 
-    <div class="container mx-auto max-w-7xl space-y-8">
+    <div class="container mx-auto max-w-7xl space-y-10">
         
-        <header class="p-6 md:p-8 rounded-xl card border-b-4 border-accent">
-            <div class="flex flex-col md:flex-row justify-between items-center md:items-start">
+        <header class="p-6 md:p-8 rounded-xl card border-b-4 border-accent relative overflow-hidden">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start relative z-10">
                 
                 <div class="text-center md:text-left w-full md:w-2/3">
                     <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight color-primary uppercase">GROWTHÍCULO</h1>
                     <p class="text-lg font-semibold mt-1 text-gray-600">Currículo interativo de performance e inovação</p>
                     
-                    <h2 class="text-3xl font-bold mt-4 text-gray-800">Josy Francisco Domingues</h2>
-                    <p class="text-xl font-bold color-accent mt-1">Marketing, Automação & IA | Growth, UX e Gestão de Projetos</p>
+                    <h2 class="text-3xl font-bold mt-5 text-gray-900">Josy Domingues</h2>
+                    <p class="text-lg md:text-xl font-bold color-accent mt-1">Transformação de Processos | Inovação | Automação & IA | Gestão de Projetos</p>
 
-                    <p class="mt-3 text-gray-700 text-base md:text-lg leading-snug">
-                        Especialista em estruturar processos, automações e estratégias que aumentam eficiência, conversão e experiência do cliente.
-                    </p>
-
-                    <div class="mt-3 flex flex-wrap justify-center md:justify-start gap-2 text-sm font-semibold text-gray-600 bg-gray-50 p-2 rounded-lg inline-block">
-                        <span>🚀 +10 anos de experiência</span>
-                        <span class="hidden md:inline">|</span>
-                        <span>💬 Automação WhatsApp + CRM</span>
-                        <span class="hidden md:inline">|</span>
-                        <span>🎉 Eventos de grande porte</span>
-                        <span class="hidden md:inline">|</span>
-                        <span>👥 Times de até 30 pessoas</span>
+                    <div class="mt-4 bg-primary-light border-l-4 border-primary p-4 rounded-r-lg">
+                        <p class="text-gray-800 text-base md:text-lg font-medium italic">
+                            "Especialista em transformar operações complexas em sistemas eficientes através de estratégia, automação e inteligência artificial."
+                        </p>
                     </div>
 
-                    <div class="mt-6 bg-primary-light border border-indigo-200 p-4 rounded-lg text-center md:text-left">
+                    <div class="mt-5 flex flex-wrap justify-center md:justify-start gap-2 text-sm font-semibold text-gray-700 bg-gray-50 p-3 rounded-lg border border-gray-100">
+                        <span class="flex items-center">🚀 +10 anos de experiência</span>
+                        <span class="hidden md:inline text-gray-300">|</span>
+                        <span class="flex items-center">⚙ Automação + CRM + IA aplicada</span>
+                        <span class="hidden lg:inline text-gray-300">|</span>
+                        <span class="flex items-center">🎤 Eventos de inovação</span>
+                        <span class="hidden md:inline text-gray-300">|</span>
+                        <span class="flex items-center">👥 Liderança de equipes</span>
+                    </div>
+
+                    <div class="mt-6 bg-white border border-indigo-100 shadow-sm p-4 rounded-lg text-center md:text-left">
                         <p class="text-indigo-900 font-bold">💬 Quer entender como aplico IA e automação na prática?</p>
-                        <p class="text-indigo-800 text-sm mt-1">Converse com a <span class="font-extrabold">LIa</span>, minha assistente virtual (canto inferior direito), e tire dúvidas sobre minha experiência, projetos e resultados.</p>
+                        <p class="text-indigo-800 text-sm mt-1">Converse com a <span class="font-extrabold">LIa</span>, minha assistente virtual (canto inferior direito), e explore meus projetos, resultados e experiências.</p>
                     </div>
                 </div>
                 
                 <div class="mt-8 md:mt-0 text-center md:text-right text-base space-y-2 text-gray-600 w-full md:w-1/3 flex flex-col items-center md:items-end">
                     <p>📍 Saquarema – RJ</p>
                     <p>☎ (21) 97384-0942</p>
-                    <p>✉ <a href="mailto:josyyfrann@gmail.com" class="hover:text-primary transition">josyyfrann@gmail.com</a></p>
-                    <a href="https://linkedin.com/in/josydomingues" target="_blank" class="inline-flex items-center mt-2 text-blue-700 hover:text-blue-900 font-semibold transition">
-                        <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        linkedin.com/in/josydomingues
+                    <p>✉ <a href="mailto:josyyfrann@gmail.com" class="hover:text-primary transition font-medium">josyyfrann@gmail.com</a></p>
+                    <a href="https://linkedin.com/in/josydomingues" target="_blank" class="inline-flex items-center mt-2 text-blue-700 hover:text-blue-900 font-bold transition bg-blue-50 px-3 py-1 rounded-full">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        LinkedIn
                     </a>
                 </div>
             </div>
         </header>
         
-        <nav class="card p-3 rounded-xl bg-primary shadow-lg sticky top-2 z-50">
-            <div class="container mx-auto max-w-7xl">
-                <div class="flex items-center justify-center">
-                    <div class="flex flex-wrap justify-center gap-2 md:gap-4">
-                        <a href="#perfil" class="text-gray-900 bg-gray-200 hover:bg-white hover:text-primary px-3 py-2 rounded-md text-xs md:text-sm font-bold transition duration-300">Perfil</a>
-                        <a href="#entregas" class="text-gray-900 bg-gray-200 hover:bg-white hover:text-primary px-3 py-2 rounded-md text-xs md:text-sm font-bold transition duration-300">O que entrego</a>
-                        <a href="#proficiencia" class="text-gray-900 bg-gray-200 hover:bg-white hover:text-primary px-3 py-2 rounded-md text-xs md:text-sm font-bold transition duration-300">Proficiência</a>
-                        <a href="#experiencia" class="text-gray-900 bg-gray-200 hover:bg-white hover:text-primary px-3 py-2 rounded-md text-xs md:text-sm font-bold transition duration-300">Experiência</a>
-                        <a href="#projetos" class="text-gray-900 bg-gray-200 hover:bg-white hover:text-primary px-3 py-2 rounded-md text-xs md:text-sm font-bold transition duration-300">Projetos</a>
-                    </div>
+        <nav class="card p-2 md:p-3 rounded-xl bg-primary shadow-lg sticky top-2 z-50">
+            <div class="container mx-auto">
+                <div class="flex flex-wrap justify-center gap-1 md:gap-3">
+                    <a href="#perfil" class="text-gray-900 bg-gray-100 hover:bg-white hover:text-primary px-3 py-2 rounded-md text-xs md:text-sm font-bold transition">Perfil</a>
+                    <a href="#resultados" class="text-gray-900 bg-gray-100 hover:bg-white hover:text-primary px-3 py-2 rounded-md text-xs md:text-sm font-bold transition">Resultados</a>
+                    <a href="#entregas" class="text-gray-900 bg-gray-100 hover:bg-white hover:text-primary px-3 py-2 rounded-md text-xs md:text-sm font-bold transition">Entregas</a>
+                    <a href="#metodo" class="text-gray-900 bg-gray-100 hover:bg-white hover:text-primary px-3 py-2 rounded-md text-xs md:text-sm font-bold transition">Método</a>
+                    <a href="#experiencia" class="text-gray-900 bg-gray-100 hover:bg-white hover:text-primary px-3 py-2 rounded-md text-xs md:text-sm font-bold transition">Experiência</a>
+                    <a href="#stack" class="text-gray-900 bg-gray-100 hover:bg-white hover:text-primary px-3 py-2 rounded-md text-xs md:text-sm font-bold transition">Stack</a>
+                    <a href="#contato" class="text-gray-900 bg-accent hover:bg-white hover:text-primary px-3 py-2 rounded-md text-xs md:text-sm font-bold transition">Contato</a>
                 </div>
             </div>
         </nav>
 
+        <section id="perfil" class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-        <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-
-            <div id="perfil" class="card p-6 rounded-xl col-span-1 lg:col-span-2 flex flex-col gap-6">
-                
+            <div class="card p-6 rounded-xl col-span-1 lg:col-span-2 flex flex-col gap-6">
                 <div>
-                    <h3 class="section-title color-primary border-primary">Sobre Mim</h3>
-                    <p class="text-gray-700 leading-relaxed text-justify">
-                        Coordenadora de Marketing & Projetos, com mais de <b>10 anos de experiência</b> em comunicação, marketing e branding, atuando nos últimos anos com automação digital, growth marketing, CRM, UX/CX e produção de eventos corporativos.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed mt-3 text-justify">
-                        Atuo na interseção entre negócios, tecnologia e experiência do cliente, liderando projetos que geram eficiência operacional, crescimento e impacto mensurável.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed mt-3 text-justify">
-                        Tenho experiência em planejamento estratégico, automação no-code, gestão de equipes multidisciplinares e eventos de grande porte, como o <b>Rio Innovation Week</b>, sempre com foco em resultados, escala e melhoria contínua da experiência.
-                    </p>
+                    <h3 class="section-title color-primary border-primary">Perfil Profissional</h3>
+                    <div class="text-gray-700 leading-relaxed space-y-3 text-justify">
+                        <p>
+                            Profissional com experiência em coordenação de projetos estratégicos, marketing digital, inovação e automação, atuando na interseção entre negócios, tecnologia e experiência do cliente.
+                        </p>
+                        <p>
+                            Ao longo da carreira, especializei-me em transformar processos complexos em soluções simples e escaláveis, estruturando jornadas, automações e sistemas de gestão que aumentam a eficiência operacional e melhoram o relacionamento com clientes.
+                        </p>
+                        <p>
+                            Tenho histórico de implementação de automação e inteligência artificial aplicada a marketing, atendimento e análise de dados, gerando ganhos expressivos de produtividade e escala. Atuo com facilidade em ambientes multidisciplinares, conectando estratégia, operação e tecnologia para transformar ideias em projetos executáveis.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-gray-900 mb-2">A minha atuação combina:</h4>
+                            <ul class="space-y-1 text-sm text-gray-700">
+                                <li>✔ Visão estratégica de negócios</li>
+                                <li>✔ Organização de processos e equipas</li>
+                                <li>✔ Implementação de tecnologia e automação</li>
+                                <li>✔ Foco em resultados mensuráveis</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="bg-gray-50 border border-gray-200 rounded-lg p-5">
-                    <h4 class="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                <div class="bg-primary-light border border-indigo-200 rounded-lg p-5">
+                    <h4 class="text-lg font-bold text-indigo-900 mb-3 flex items-center">
                         <span class="text-2xl mr-2">🤖</span> IA & Automação na prática
                     </h4>
-                    <p class="text-gray-700 mb-3">
-                        Desenvolvo e implemento agentes de IA e automações inteligentes para atendimento, marketing e apoio à tomada de decisão. Na prática, isso inclui:
+                    <p class="text-gray-800 mb-3 text-sm">
+                        Desenvolvo e implemento soluções de automação e agentes de IA aplicados a marketing, atendimento e gestão de dados. Aplicações práticas incluem:
                     </p>
-                    <ul class="space-y-2 text-sm text-gray-700">
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            Agentes de IA para atendimento via WhatsApp e canais digitais
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            Automação de captação, qualificação e registro de leads em CRM
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            IA para análise de dados, indicadores e apoio à gestão
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            Redução de tarefas manuais e aumento de eficiência operacional
-                        </li>
+                    <ul class="space-y-2 text-sm text-gray-800 font-medium">
+                        <li>⚡ Agentes de IA para atendimento e qualificação de leads via WhatsApp</li>
+                        <li>⚡ Automação de captação e registo de leads em CRM</li>
+                        <li>⚡ Análise de dados e geração de insights para tomada de decisão</li>
+                        <li>⚡ Automação de processos operacionais e rotinas repetitivas</li>
                     </ul>
-                    <p class="mt-4 text-sm font-semibold color-primary italic">
-                        "Sempre com foco em resolver problemas reais de negócio, não apenas implantar tecnologia."
-                    </p>
+                    <div class="mt-4 p-3 bg-white rounded shadow-sm">
+                        <p class="text-sm font-bold color-primary">
+                            🎯 Resultado: Mais eficiência operacional, escalabilidade e melhor experiência para clientes. Sempre com foco em resolver problemas reais de negócio — não apenas implantar tecnologia.
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div id="proficiencia" class="card p-6 rounded-xl col-span-1 flex flex-col">
+            <div class="card p-6 rounded-xl col-span-1 flex flex-col">
                 <div>
                     <h3 class="text-2xl font-bold color-primary mb-2 border-b border-gray-200 pb-2">Grau de Proficiência</h3>
-                    <p class="text-xs text-gray-500 mb-4">Escala 1 (Básico) a 5 (Expert).</p>
+                    <p class="text-xs text-gray-500 mb-4">Mapeamento de competências (Escala 1 a 5).</p>
                 </div>
                 <div class="flex-grow relative" style="min-height: 300px;">
                     <canvas id="radarChart"></canvas>
@@ -191,46 +195,139 @@
             </div>
         </section>
 
-        <section id="entregas" class="my-8">
+        <section id="resultados" class="my-8">
+            <h3 class="text-2xl font-extrabold text-gray-800 mb-6 uppercase tracking-wide border-l-4 border-accent pl-4">Resultados de Impacto</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="card p-6 bg-gradient-to-br from-primary to-indigo-700 text-white text-center flex flex-col justify-center">
+                    <span class="stat-text text-accent">+500%</span>
+                    <p class="mt-2 font-medium text-indigo-100">Aumento em interações com clientes via automação digital</p>
+                </div>
+                <div class="card p-6 bg-white text-center border-b-4 border-primary flex flex-col justify-center">
+                    <span class="stat-text color-primary">30 min</span>
+                    <p class="mt-2 font-medium text-gray-600">Redução de processos estratégicos que antes levavam 20 dias</p>
+                </div>
+                <div class="card p-6 bg-white text-center border-b-4 border-accent flex flex-col justify-center">
+                    <span class="stat-text text-gray-800">100%</span>
+                    <p class="mt-2 font-medium text-gray-600">Implantação de sistemas de atendimento escaláveis sem aumento de equipa</p>
+                </div>
+                <div class="card p-6 bg-gray-800 text-white text-center flex flex-col justify-center">
+                    <span class="text-4xl mb-2">👥</span>
+                    <p class="font-medium text-gray-200">Liderança de equipas multidisciplinares em projetos complexos</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="metodo" class="card p-6 rounded-xl bg-white">
+            <h3 class="section-title color-primary border-primary">Como eu resolvo problemas</h3>
+            <p class="mb-6 text-gray-600 font-medium">O meu método para projetos de coordenação, produto e inovação segue quatro etapas claras:</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-gray-50 p-5 rounded-lg step-card shadow-sm">
+                    <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold mb-3">1</div>
+                    <h4 class="font-bold text-gray-900 mb-2">Diagnóstico</h4>
+                    <p class="text-sm text-gray-600">Mapeio processos, jornadas e gargalos operacionais.</p>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-lg step-card shadow-sm">
+                    <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold mb-3">2</div>
+                    <h4 class="font-bold text-gray-900 mb-2">Estratégia</h4>
+                    <p class="text-sm text-gray-600">Defino fluxos, automações e a estrutura de crescimento.</p>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-lg step-card shadow-sm">
+                    <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold mb-3">3</div>
+                    <h4 class="font-bold text-gray-900 mb-2">Implementação</h4>
+                    <p class="text-sm text-gray-600">Implanto integrações, automações e organização de projetos.</p>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-lg step-card shadow-sm">
+                    <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold mb-3">4</div>
+                    <h4 class="font-bold text-gray-900 mb-2">Otimização</h4>
+                    <p class="text-sm text-gray-600">Analiso dados, ajusto processos e escalo o que funciona.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-accent-light border border-lime-200 rounded-xl p-6 md:p-8 relative overflow-hidden shadow-sm">
+            <div class="absolute top-0 right-0 p-4 opacity-10 text-6xl">🏆</div>
+            <h3 class="text-2xl font-extrabold color-primary mb-4">Case — Automação de Relacionamento</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                    <h4 class="text-red-600 font-bold mb-1 uppercase text-sm">🚨 Problema</h4>
+                    <p class="text-gray-700 text-sm">Empresa com baixo volume de interação com leads e alto retrabalho manual.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                    <h4 class="text-blue-600 font-bold mb-1 uppercase text-sm">💡 Solução</h4>
+                    <p class="text-gray-700 text-sm">Estruturei a automação de atendimento e relacionamento utilizando CRM e integrações no-code.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-accent">
+                    <h4 class="text-green-600 font-bold mb-1 uppercase text-sm">✅ Resultado</h4>
+                    <ul class="text-gray-700 text-sm space-y-1">
+                        <li>• Aumento de interações de 8 para 54 por dia</li>
+                        <li>• Melhoria no relacionamento com clientes</li>
+                        <li>• Redução de tarefas operacionais</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="entregas">
             <h3 class="text-2xl font-extrabold text-gray-800 mb-6 uppercase tracking-wide border-l-4 border-accent pl-4">O que eu entrego</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                
-                <div class="card p-5 delivery-card bg-white hover:bg-gray-50 transition">
-                    <div class="text-3xl mb-2">⚙️</div>
+                <div class="card p-5 delivery-card bg-white hover:bg-gray-50">
+                    <div class="text-3xl mb-2">⚙</div>
                     <h4 class="font-bold text-gray-900 mb-2">Automação de Mkt & Atendimento</h4>
-                    <p class="text-sm text-gray-600">Implementação de fluxos inteligentes via WhatsApp API e integrações com CRM.</p>
+                    <p class="text-sm text-gray-600">Implantação de fluxos inteligentes integrando WhatsApp, CRM e ferramentas no-code.</p>
                 </div>
-
-                <div class="card p-5 delivery-card bg-white hover:bg-gray-50 transition">
+                <div class="card p-5 delivery-card bg-white hover:bg-gray-50">
                     <div class="text-3xl mb-2">🔗</div>
-                    <h4 class="font-bold text-gray-900 mb-2">Funis & Jornadas</h4>
-                    <p class="text-sm text-gray-600">Estruturação de réguas de relacionamento, recuperação de vendas e onboarding.</p>
+                    <h4 class="font-bold text-gray-900 mb-2">Funis, Jornadas & Relacionamento</h4>
+                    <p class="text-sm text-gray-600">Estruturação de jornadas de clientes, onboarding e réguas de relacionamento.</p>
                 </div>
-
-                <div class="card p-5 delivery-card bg-white hover:bg-gray-50 transition">
+                <div class="card p-5 delivery-card bg-white hover:bg-gray-50">
                     <div class="text-3xl mb-2">👥</div>
-                    <h4 class="font-bold text-gray-900 mb-2">Gestão Ágil</h4>
-                    <p class="text-sm text-gray-600">Liderança de times multidisciplinares e gestão de projetos (Scrum/Kanban).</p>
+                    <h4 class="font-bold text-gray-900 mb-2">Gestão de Projetos & Times</h4>
+                    <p class="text-sm text-gray-600">Liderança de equipas multidisciplinares e gestão de projetos com Scrum e Kanban.</p>
                 </div>
-
-                <div class="card p-5 delivery-card bg-white hover:bg-gray-50 transition">
+                <div class="card p-5 delivery-card bg-white hover:bg-gray-50">
                     <div class="text-3xl mb-2">📈</div>
-                    <h4 class="font-bold text-gray-900 mb-2">Planejamento Estratégico</h4>
-                    <p class="text-sm text-gray-600">Estratégias de Growth, comunicação omnichannel e posicionamento de marca.</p>
+                    <h4 class="font-bold text-gray-900 mb-2">Planejamento Estratégico & Growth</h4>
+                    <p class="text-sm text-gray-600">Estratégias orientadas por dados para crescimento e posicionamento de marca.</p>
                 </div>
-
-                <div class="card p-5 delivery-card bg-white hover:bg-gray-50 transition">
+                <div class="card p-5 delivery-card bg-white hover:bg-gray-50">
                     <div class="text-3xl mb-2">🎤</div>
-                    <h4 class="font-bold text-gray-900 mb-2">Eventos Corporativos</h4>
-                    <p class="text-sm text-gray-600">Produção de eventos de inovação e grande porte.</p>
+                    <h4 class="font-bold text-gray-900 mb-2">Eventos Corporativos & Inovação</h4>
+                    <p class="text-sm text-gray-600">Produção e gestão operacional de eventos de médio e grande porte.</p>
                 </div>
-
-                <div class="card p-5 delivery-card bg-white hover:bg-gray-50 transition">
+                <div class="card p-5 delivery-card bg-white hover:bg-gray-50">
                     <div class="text-3xl mb-2">🔍</div>
                     <h4 class="font-bold text-gray-900 mb-2">Diagnóstico & Processos</h4>
-                    <p class="text-sm text-gray-600">Análise de gargalos, otimização operacional e modelagem de processos.</p>
+                    <p class="text-sm text-gray-600">Mapeamento de jornadas, identificação de gargalos e otimização operacional.</p>
                 </div>
+            </div>
+        </section>
 
+        <section id="stack" class="card p-6 rounded-xl bg-gray-900 text-white">
+            <h3 class="text-2xl font-extrabold mb-6 uppercase tracking-wide border-l-4 border-accent pl-4 text-white">Stack de Ferramentas</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div>
+                    <h4 class="text-accent font-bold mb-2 flex items-center"><span class="mr-2">⚙</span> Automação & Integração</h4>
+                    <p class="text-sm text-gray-300">Make, n8n, APIs, Webhooks, WhatsApp API</p>
+                </div>
+                <div>
+                    <h4 class="text-accent font-bold mb-2 flex items-center"><span class="mr-2">🎯</span> CRM & Marketing</h4>
+                    <p class="text-sm text-gray-300">RD Station, funis de vendas, automação de marketing</p>
+                </div>
+                <div>
+                    <h4 class="text-accent font-bold mb-2 flex items-center"><span class="mr-2">📊</span> Dados & Análise</h4>
+                    <p class="text-sm text-gray-300">Google Sheets avançado, dashboards, Looker Studio</p>
+                </div>
+                <div>
+                    <h4 class="text-accent font-bold mb-2 flex items-center"><span class="mr-2">📋</span> Gestão de Projetos</h4>
+                    <p class="text-sm text-gray-300">Scrum, Kanban, OKRs, Trello, Monday</p>
+                </div>
+                <div>
+                    <h4 class="text-accent font-bold mb-2 flex items-center"><span class="mr-2">🤖</span> IA Aplicada</h4>
+                    <p class="text-sm text-gray-300">ChatGPT, agentes de IA, automação de processos</p>
+                </div>
             </div>
         </section>
 
@@ -239,156 +336,124 @@
             
             <div class="space-y-8 mt-6">
                 <div class="timeline-item">
-                    <h4 class="text-xl font-bold text-gray-800">AlquimIA Automações — Especialista em Automação & Marketing</h4>
-                    <p class="text-sm color-accent font-medium mb-3">2024 – Atual | Modelo remoto</p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700 ml-2 text-sm">
-                        <li>Desenvolvimento de chatbots inteligentes com IA integrados a CRMs.</li>
-                        <li>Implementação de automação de relacionamento e captação via WhatsApp e redes sociais.</li>
-                        <li>Consultoria em eficiência operacional e experiência do cliente para clínicas e healthtechs.</li>
-                        <li>Criação de régua de relacionamento e campanhas segmentadas com foco em retenção.</li>
-                        <li>Mapeamento de jornada e desenvolvimento de ambiente omnichannel.</li>
-                    </ul>
-                </div>
-                
-                <div class="timeline-item">
-                    <h4 class="text-xl font-bold text-gray-800">UXMed – Coordenadora de Projetos e Arquitetura de soluções</h4>
-                    <p class="text-sm color-accent font-medium mb-3">Fev/2022 – Dez/2025 | Modelo híbrido</p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700 ml-2 text-sm">
-                        <li>Planejamento estratégico e automação de marketing e atendimento (RD Station, n8n e Make), com foco em eficiência operacional e conversão.</li>
-                        <li>Criação de agentes de IA para otimizar processos e atendimentos.</li>
-                        <li>Estruturação de funis, fluxos automatizados e jornadas de relacionamento.</li>
-                        <li>Organização de eventos corporativos e de inovação na área da saúde.</li>
-                        <li>Liderança de equipes ágeis e gestão de projetos multidisciplinares (Scrum/Kanban).</li>
-                        <li>Diagnóstico de negócios, análise de dados e modelagem de processos.</li>
-                    </ul>
-                </div>
-
-                    <div class="timeline-item">
-                    <h4 class="text-xl font-bold text-gray-800">Bar do Zé – Gestora de Marketing e Projetos</h4>
-                    <p class="text-sm color-accent font-medium mb-3">2025 | Freelance | Modelo híbrido</p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700 ml-2 text-sm">
-                        <li>Reposicionamento de marca e estratégias de marketing local com foco em experiência.</li>
-                        <li>Estruturação de processos de atendimento, comunicação e produção de eventos.</li>
-                        <li>Integração entre experiências presenciais e canais digitais.</li>
+                    <h4 class="text-xl font-bold text-gray-800">AlquimIA Automações — Especialista em Projetos de Automação</h4>
+                    <p class="text-sm color-accent font-medium mb-3">2024 – Atual | Remoto</p>
+                    <p class="text-sm text-gray-700 mb-2">Desenvolvimento e implantação de soluções de automação com Inteligência Artificial para clínicas e negócios de saúde. Atuação focada em eficiência operacional, automação de relacionamento e organização de processos digitais.</p>
+                    <p class="font-semibold text-gray-900 text-sm mt-3 mb-1">Principais atividades:</p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700 ml-2 text-sm">
+                        <li>Implantação de automações e chatbots integrados a CRM e WhatsApp API</li>
+                        <li>Estruturação de funis de captação e qualificação de leads</li>
+                        <li>Integração de ferramentas no-code como Make e n8n</li>
+                        <li>Diagnóstico de processos e implementação de melhorias operacionais</li>
+                        <li>Estruturação de jornadas omnichannel de relacionamento com clientes</li>
                     </ul>
                 </div>
 
                 <div class="timeline-item">
-                    <h4 class="text-xl font-bold text-gray-800">Base Eventos – Produtora de Eventos Corporativos (Rio Innovation Week / LER)</h4>
-                    <p class="text-sm color-accent font-medium mb-3">2022 – 2023 | Modelo híbrido</p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700 ml-2 text-sm">
-                        <li>Gestão da arena HealthTech, relacioamento com a curadoria de conteúdo e relacionamento com patrocinadores.</li>
-                        <li>Coordenação de equipes e fornecedores, infraestrutura e cronograma de execução.</li>
-                        <li>Suporte à comunicação e ativações de marca durante eventos de grande porte.</li>
-                    </ul>
+                    <h4 class="text-xl font-bold text-gray-800">UXMed — Coordenadora de Projetos Estratégicos e Inovação</h4>
+                    <p class="text-sm color-accent font-medium mb-3">2021 – 2025 | Híbrido</p>
+                    <p class="text-sm text-gray-700 mb-2">Coordenação de projetos estratégicos de marketing, inovação e experiência do cliente. Responsável por conectar estratégia, operação e tecnologia, estruturando processos e sistemas que aumentaram a eficiência e escala do negócio.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                        <div>
+                            <p class="font-semibold text-gray-900 text-sm mb-1">Principais entregas:</p>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700 ml-2 text-sm">
+                                <li>Planejamento e gestão de projetos com metodologias ágeis</li>
+                                <li>Implantação de automação de marketing e atendimento</li>
+                                <li>Criação de funis e jornadas de relacionamento</li>
+                                <li>Diagnóstico de negócios e modelagem de processos</li>
+                                <li>Organização de eventos corporativos e inovação em saúde</li>
+                                <li>Liderança de equipas multidisciplinares</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 p-3 rounded border border-gray-200">
+                            <p class="font-semibold text-primary text-sm mb-1">Resultados relevantes:</p>
+                            <ul class="list-none space-y-2 text-gray-700 text-sm">
+                                <li>📈 Aumento de 8 para 54 interações diárias via automação</li>
+                                <li>⏱ Redução de processos estratégicos de 20 dias para 30 minutos</li>
+                                <li>🚀 Desenvolvimento de novos produtos e serviços digitais</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                          
+
                 <div class="timeline-item last-item" style="border-left: none; padding-bottom: 0;">
-                    <h4 class="text-xl font-bold text-gray-800">Eventos de Entretenimento</h4>
-                    <p class="text-sm color-accent font-medium mb-3">2011 – 2018 | Freelance | Modelo presencial</p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700 ml-2 text-sm">
-                        <li>Produção e operação de eventos de médio e grande porte (shows, festivais e eventos esportivos).</li>
-                        <li>Gestão de equipes de bar, salão e atendimento.</li>
-                        <li>Controle de estoque, fluxo de público e relacionamento com fornecedores e patrocinadores.</li>
+                    <h4 class="text-xl font-bold text-gray-800">Base Eventos — Produção de Eventos Corporativos</h4>
+                    <p class="text-sm color-accent font-medium mb-3">2022 – 2023</p>
+                    <p class="text-sm text-gray-700 mb-2">Gestão operacional da Arena HealthTech no Rio Innovation Week, um dos maiores eventos de inovação da América Latina.</p>
+                    <p class="font-semibold text-gray-900 text-sm mt-3 mb-1">Responsável por:</p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700 ml-2 text-sm mb-2">
+                        <li>Coordenação de equipas e fornecedores</li>
+                        <li>Gestão de infraestrutura e operação do evento</li>
+                        <li>Relacionamento com patrocinadores e curadoria de conteúdo</li>
+                        <li>Organização de cronogramas e fluxos operacionais</li>
                     </ul>
+                    <p class="text-sm text-gray-700 italic">Também atuou na implementação de automação de comunicação e captação de leads utilizando RD Station e ferramentas de integração.</p>
                 </div>
-
-            </div>
-        </section>
-
-        <section id="competencias" class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            
-            <div class="card p-6 rounded-xl lg:col-span-2">
-                <h3 class="section-title color-primary border-primary">Competências Técnicas (Hard Skills)</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-700">
-                    <div>
-                        <p class="font-bold text-gray-900">Automação e CRM:</p>
-                        <p>RD Station, Make (Integromat), n8n, Bitrix24, Monday, Trello</p>
-                    </div>
-                    <div>
-                        <p class="font-bold text-gray-900">Marketing & Growth:</p>
-                        <p>Funis, inbound, Ads, régua de relacionamento, SEO e dados</p>
-                    </div>
-                    <div>
-                        <p class="font-bold text-gray-900">Dados e Métricas:</p>
-                        <p>Google Sheets avançado, Looker Studio, KPIs e dashboards</p>
-                    </div>
-                    <div>
-                        <p class="font-bold text-gray-900">Web e Conteúdo:</p>
-                        <p>WordPress, copywriting, produção de artigos, e-books e landing pages</p>
-                    </div>
-                    <div>
-                        <p class="font-bold text-gray-900">Gestão de Projetos:</p>
-                        <p>Scrum, Kanban, OKRs, metodologias ágeis</p>
-                    </div>
-                    <div>
-                        <p class="font-bold text-gray-900">Design e UX:</p>
-                        <p>Canva, Figma, Photoshop, CorelDraw, Design Thinking</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card p-6 rounded-xl">
-                <h3 class="section-title color-primary border-primary">Soft Skills</h3>
-                <ul class="space-y-3 text-gray-700">
-                    <li><span class="color-accent">•</span> Liderança e comunicação</li>
-                    <li><span class="color-accent">•</span> Pensamento estratégico</li>
-                    <li><span class="color-accent">•</span> Criatividade e inovação</li>
-                    <li><span class="color-accent">•</span> Foco em resultados</li>
-                    <li><span class="color-accent">•</span> Adaptabilidade</li>
-                    <li><span class="color-accent">•</span> Storytelling e influência</li>
-                </ul>
             </div>
         </section>
 
         <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div id="formacao" class="card p-6 rounded-xl">
-                <h3 class="section-title color-primary border-primary">Formação e Certificações</h3>
-                
-                <h4 class="text-lg font-bold text-gray-800 mb-2">Formação Acadêmica</h4>
-                <ul class="space-y-2 text-gray-700 ml-4 mb-6">
-                    <li class="font-semibold"><span class="color-accent">•</span> Tecnólogo em Marketing – Universidade Estácio de Sá</li>
-                    <li class="font-semibold"><span class="color-accent">•</span> Técnico em Propaganda e Marketing – FAETEC</li>
-                    <li class="font-semibold"><span class="color-accent">•</span> Bacharelado em Sistemas da Informação – Estácio (em andamento)</li>
-                </ul>
-                
-                <h4 class="text-lg font-bold text-gray-800 mb-2">Certificações e Cursos</h4>
-                <ul class="space-y-2 text-gray-700 ml-4 text-sm">
-                    <li><span class="color-accent">•</span> Growth Marketing – GLA</li>
-                    <li><span class="color-accent">•</span> Gestão de Projetos e Ágil – Alumni Coppead</li>
-                    <li><span class="color-accent">•</span> Negociação – Alumni Coppead</li>
-                    <li><span class="color-accent">•</span> Automação e Chatbots – Automatik Labs</li>
+            
+            <div class="card p-6 rounded-xl">
+                <h3 class="section-title color-primary border-primary">Destaques & Projetos</h3>
+                <ul class="space-y-4 text-gray-700">
+                    <li class="p-3 bg-gray-50 rounded border border-gray-100">
+                        <span class="font-extrabold color-primary block mb-1">Rio Innovation Week</span>
+                        <span class="text-sm">Gestão operacional da Arena HealthTech, incluindo infraestrutura, equipas e experiência do público.</span>
+                    </li>
+                    <li class="p-3 bg-gray-50 rounded border border-gray-100">
+                        <span class="font-extrabold color-primary block mb-1">Projeto Purple</span>
+                        <span class="text-sm">Plataforma de análise estratégica de dados com IA para apoio à tomada de decisão.</span>
+                    </li>
+                    <li class="p-3 bg-gray-50 rounded border border-gray-100">
+                        <span class="font-extrabold color-primary block mb-1">Automação para clínicas</span>
+                        <span class="text-sm">Implantação de chatbots e automações com redução significativa no tempo de atendimento.</span>
+                    </li>
                 </ul>
             </div>
 
-            <div id="projetos" class="card p-6 rounded-xl">
-                <h3 class="section-title color-primary border-primary">Destaques & Projetos</h3>
-                <ul class="space-y-4 text-gray-700">
-                    <li>
-                        <span class="font-bold color-primary">Rio Innovation Week:</span><br>
-                        Produção e gestão operacional da Arena HealthTech, com foco em infraestrutura, equipes e experiência do público.
-                    </li>
-                    <li>
-                        <span class="font-bold color-primary">Projeto Purple:</span><br>
-                        Plataforma de decisões de negócio com IA para análise de dados e insights estratégicos.
-                    </li>
-                    <li>
-                        <span class="font-bold color-primary">Automação de Clínicas:</span><br>
-                        Implantação de chatbots integrados, com redução de até 40% no tempo de atendimento.
-                    </li>
-                    <li>
-                        <span class="font-bold color-primary">Bar do Zé:</span><br>
-                        Criação de branding e estratégias digitais para aumento de visibilidade e posicionamento da marca.
-                    </li>
+            <div class="card p-6 rounded-xl bg-primary-light">
+                <h3 class="section-title color-primary border-primary">O Desafio que procuro</h3>
+                <p class="mb-4 text-gray-800 font-medium">Busco atuar em projetos que envolvam:</p>
+                <ul class="space-y-3 text-gray-800 font-semibold">
+                    <li class="flex items-center"><span class="text-xl mr-2">🚀</span> Inovação e transformação digital</li>
+                    <li class="flex items-center"><span class="text-xl mr-2">⚙</span> Automação de processos e uso de IA</li>
+                    <li class="flex items-center"><span class="text-xl mr-2">📈</span> Estruturação de marketing e crescimento</li>
+                    <li class="flex items-center"><span class="text-xl mr-2">🧩</span> Organização de projetos complexos</li>
+                    <li class="flex items-center"><span class="text-xl mr-2">💡</span> Criação de novos produtos ou serviços</li>
                 </ul>
+                
+                <div class="mt-6 border-t border-indigo-200 pt-4">
+                    <h4 class="font-bold text-indigo-900 mb-1">Objetivo Profissional</h4>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Atuar em posições de coordenação ou gestão de projetos, inovação ou automação, contribuindo com estratégia, organização de processos e implementação de tecnologia para gerar eficiência, crescimento e impacto real nos negócios.
+                    </p>
+                </div>
             </div>
         </section>
         
-        <section id="objetivo" class="card p-6 rounded-xl bg-primary-light border-l-8 border-primary">
-            <h3 class="section-title color-primary border-primary">Objetivo Profissional</h3>
-            <p class="text-lg md:text-xl font-medium text-gray-800 leading-relaxed">
-                Atuar em posições de coordenação ou gestão de marketing, automação e projetos, em ambientes digitais e orientados a crescimento, contribuindo com estratégia, eficiência operacional e experiência do cliente.
+        <section id="contato" class="card p-8 rounded-xl bg-white border-4 border-primary text-center">
+            <h2 class="text-3xl font-extrabold color-primary mb-3">Vamos conversar?</h2>
+            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                Se procura uma profissional capaz de estruturar processos, implementar automação e liderar projetos estratégicos, será um prazer trocar ideias.
             </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="https://linkedin.com/in/josydomingues" target="_blank" class="w-full sm:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg shadow-md transition flex items-center justify-center">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    Fale comigo no LinkedIn
+                </a>
+                
+                <a href="https://wa.me/5521973840942" target="_blank" class="w-full sm:w-auto px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg shadow-md transition flex items-center justify-center">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z"/></svg>
+                    WhatsApp
+                </a>
+                
+                <button onclick="document.querySelector('.gptmaker-float-btn').click()" class="w-full sm:w-auto px-6 py-3 bg-indigo-100 hover:bg-indigo-200 text-indigo-900 font-bold rounded-lg shadow-sm transition border border-indigo-300 flex items-center justify-center">
+                    💬 Explore com a Assistente Virtual
+                </button>
+            </div>
         </section>
 
         <div class="h-24"></div> 
@@ -396,9 +461,9 @@
     </div>
 
     <script>
-        // --- CONFIGURAÇÃO E DADOS PARA O GRÁFICO DE RADAR (PROFICIÊNCIA) ---
+        // CONFIGURAÇÃO DO GRÁFICO RADAR
         const CHART_LABELS = [
-            'Growth & Automação', 
+            'Automação & Growth', 
             'Gestão de Projetos', 
             'Dados & Métricas', 
             'UX/CX & Inovação', 
@@ -406,9 +471,7 @@
             'Branding'
         ];
         
-        // Dados de Josy
         const DATA_JOSY_PROFICIENCY = [5, 4.5, 4, 4.5, 5, 4];
-        
         let radarChartInstance = null;
 
         function renderRadarChart() {
@@ -419,73 +482,47 @@
                 type: 'radar',
                 data: {
                     labels: CHART_LABELS,
-                    datasets: [
-                        {
-                            label: 'Nível (1-5)',
-                            data: DATA_JOSY_PROFICIENCY,
-                            backgroundColor: 'rgba(132, 204, 22, 0.4)', /* Verde Limão semi-transparente */
-                            borderColor: '#84cc16', 
-                            borderWidth: 2,
-                            pointBackgroundColor: '#84cc16',
-                            pointBorderColor: '#fff',
-                            pointHoverBackgroundColor: '#fff',
-                            pointHoverBorderColor: '#84cc16'
-                        }
-                    ]
+                    datasets: [{
+                        label: 'Nível (1-5)',
+                        data: DATA_JOSY_PROFICIENCY,
+                        backgroundColor: 'rgba(132, 204, 22, 0.4)',
+                        borderColor: '#84cc16', 
+                        borderWidth: 2,
+                        pointBackgroundColor: '#84cc16',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#84cc16'
+                    }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    layout: {
-                        padding: 20 // CORREÇÃO: Adiciona margem para não cortar as letras
-                    },
+                    layout: { padding: 20 },
                     scales: {
                         r: {
                             angleLines: { color: 'rgba(0,0,0,0.1)' },
                             grid: { color: 'rgba(0,0,0,0.1)' },
                             pointLabels: { 
-                                font: { 
-                                    size: 11, // Tamanho de fonte ajustado
-                                    weight: 'bold',
-                                    family: "'Inter', sans-serif"
-                                }, 
-                                color: '#4b5563',
-                                backdropPadding: 2
+                                font: { size: 11, weight: 'bold', family: "'Inter', sans-serif" }, 
+                                color: '#4b5563', backdropPadding: 2
                             },
                             suggestedMin: 0,
-                            suggestedMax: 5.5, // Leve aumento para dar respiro no topo
-                            ticks: { 
-                                display: false, // Esconde os números do eixo (1, 2, 3...)
-                                stepSize: 1
-                            }
+                            suggestedMax: 5.5,
+                            ticks: { display: false, stepSize: 1 }
                         }
                     },
                     plugins: {
-                        legend: { 
-                            position: 'bottom',
-                            labels: { 
-                                font: { family: "'Inter', sans-serif" },
-                                color: '#333' 
-                            } 
-                        }
+                        legend: { position: 'bottom', labels: { font: { family: "'Inter', sans-serif" }, color: '#333' } }
                     }
                 }
             });
         }
         
-        // --- Inicialização ---
         document.addEventListener('DOMContentLoaded', () => {
             renderRadarChart();
         });
     </script>
     
-    <script 
-        async 
-        src="https://app.gptmaker.ai/widget/3E9776349A19327E768BFE986BECC174/float.js">
-    </script>
+    <script async src="https://app.gptmaker.ai/widget/3E9776349A19327E768BFE986BECC174/float.js"></script>
 </body>
 </html>
-
-
-
-
